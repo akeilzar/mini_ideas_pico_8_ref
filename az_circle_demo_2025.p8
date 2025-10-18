@@ -10,7 +10,7 @@ end
 
 function _draw()
 	cls()
-	circfill(63+sin(t/3.14)*31,63+cos(t/3.14)*31,3,7)
+	circfill(63+sin(t)*31,63+cos(t)*31,3,7)
 	circ(63,63,31,7)
 end
 
