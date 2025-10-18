@@ -6,12 +6,13 @@ __lua__
 -- the idea with these is it might be useful if u have been away for years or if just brainstorming
 
 function _init()
-t = 0
+time = 0
+origin = 63
 end
 
 function _draw()
 	cls()
-	circfill(63+sin(t)*31,63+cos(t)*31,3,7)
+	circfill(origin+sin(time)*31,origin+cos(time)*31,3,7)
 	circ(63,63,31,7)
 end
 
