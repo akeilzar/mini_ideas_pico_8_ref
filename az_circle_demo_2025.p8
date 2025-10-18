@@ -3,6 +3,7 @@ version 43
 __lua__
 -- a quick circle demo
 -- for personal reference
+-- the idea with these is it might be useful if u have been away for years or if just brainstorming
 
 function _init()
 t = 0
