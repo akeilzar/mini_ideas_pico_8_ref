@@ -1,0 +1,22 @@
+
+function _init()
+origin = 63
+u = 0.1
+cl = 1
+end
+
+function _draw()
+	cls()
+	for i=1,200 do
+	 radius = origin/(2*i)
+	 circfill(origin+sin(time())*radius,origin+cos(time())*radius,3,7)
+	 circ(origin,origin,radius/u,cl)
+	end
+end
+
+function _update()
+	u = u + sin(time()/100000)
+	u = u % 0.1
+	cl += 0.01
+	c = cl % 15
+end
