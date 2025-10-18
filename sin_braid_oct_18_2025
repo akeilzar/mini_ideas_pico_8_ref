@@ -1,0 +1,14 @@
+
+function _init()
+origin = 63
+end
+
+function _draw()
+	cls()
+	for pt=10,90 do
+		circ(pt,60+sin(pt*time()/40)*10,2,7)
+	end
+end
+
+function _update()
+end
