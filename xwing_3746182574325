@@ -1,0 +1,23 @@
+-- rotating a line many ways
+
+function _init()
+	cls()
+end
+
+function _draw()
+	circle_1 = {
+	x = 63+20*sin(time()/2.27),
+	y = 63+20*cos(time()/2)
+	}
+	circle_2 = {
+	x = 63+40*sin(time()/3),
+	y = 63-40*cos(time()/3.65)
+	}
+	line(circle_1.x,circle_1.y,circle_2.x,circle_2.y,7)
+		line(circle_2.x,circle_1.y,circle_1.x,circle_2.y,7)
+
+end
+
+function _update()
+	cls()
+end
