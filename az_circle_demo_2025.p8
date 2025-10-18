@@ -11,8 +11,9 @@ end
 
 function _draw()
 	cls()
-	circfill(origin+sin(time())*31,origin+cos(time())*31,3,7)
-	circ(63,63,31,7)
+	radius = origin/2
+	circfill(origin+sin(time())*radius,origin+cos(time())*radius,3,7)
+	circ(origin,origin,radius,7)
 end
 
 function _update()
