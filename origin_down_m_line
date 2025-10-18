@@ -1,0 +1,14 @@
+
+function _init()
+origin = 63
+end
+
+function _draw()
+	cls()
+	for pt=1,127 do
+		 circ(pt,(1+pt),0.5,7)
+	end
+end
+
+function _update()
+end
