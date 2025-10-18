@@ -1,0 +1,26 @@
+-- storing v in tables
+-- and lines as static ref
+
+function _init()
+origin = 63
+end
+
+function _draw()
+	cls()
+	-- ref
+	for pt=1,127,0.01 do
+		 circ(pt,(1+pt),0.1,7)
+	end
+	for pt=1,127,0.01 do
+		 circ(pt,(127-pt),0.1,7)
+	end
+	-- mv
+	circle_1 = {
+	x = 63+20*sin(time()/2),
+	y = 63+20*cos(time()/2)
+	}
+	circ(circle_1.x,circle_1.y,2.71,7)
+end
+
+function _update()
+end
