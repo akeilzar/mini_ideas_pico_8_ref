@@ -1,0 +1,9 @@
+function _draw()
+	cls()
+	radius = origin/2
+	circfill(origin+sin(time()/4)*radius,origin-cos(time()/2)*radius,3,7)
+	circ(origin,origin,1,7)
+	for pt=31,94 do
+		circ(pt,94+sin(pt*time()/40)*94,5,7)
+	end
+end
