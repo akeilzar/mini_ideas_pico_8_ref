@@ -1,0 +1,87 @@
+function _init()
+c = 127/2
+u = c
+u2 = c
+u3 = 127-u
+u4 = 127-u2
+mt = 0
+end
+
+function _draw()
+	for i=1,127,4 do
+		line(i,0,i,127,1)
+	end
+	for i=1,127,4 do
+		line(0,i,127,i,1)
+	end
+ --
+	pset(u,-u2,10)
+	--
+	line(u,u2,1,1,10)
+	line(u,u2,1,63,10)
+	line(u,u2,63,1,10)
+	line(u,u2,127,127,10)
+	line(u,u2,63,63,10)
+	line(u,u2,1,127,10)
+	line(u,u2,63,127,10)
+	line(u,u2,127,1,10)
+	line(u,u2,127,63,10)
+	--
+	line(63,63,1,1,8)
+	line(63,63,1,63,8)
+	line(63,63,63,1,8)
+	line(63,63,127,127,8)
+	line(63,63,63,63,8)
+	line(63,63,1,127,8)
+	line(63,63,63,127,8)
+	line(63,63,127,1,8)
+	line(63,63,127,63,8)
+	--
+	line(u3,u4,1,1,6)
+	line(u3,u4,1,63,6)
+	line(u3,u4,63,1,6)
+	line(u3,u4,127,127,6)
+	line(u3,u4,63,63,6)
+	line(u3,u4,1,127,6)
+	line(u3,u4,63,127,6)
+	line(u3,u4,127,1,6)
+	line(u3,u4,127,63,6)
+	--
+end
+
+function ln_len(x1,x2,y1,y2)
+	sq1 = (x2-x1)^2
+	sq2 = (y2-y1)^2
+	sqr3 = sqrt(sq1+sq2)
+	return sqr3
+end
+
+function _update()
+	cls()
+	if btn(➡️) then
+	 u += 1
+	 u = u % 127
+	end
+	if btn(⬅️) then
+	 u -= 1
+	 u = u % 127
+	end
+	if btn(⬆️) then
+		u2 -= 1
+		u2 = u2 % 127
+	end
+	if btn(⬇️) then
+		u2 += 1
+		u2 = u2 % 127
+	end
+	u3 = 127-u
+ u4 = 127-u2
+ if btn(❎) then
+ 	run()
+ end
+ if btn(🅾️) then
+		if mt == 1 then
+		 mt = 0
+		end
+ end
+end
